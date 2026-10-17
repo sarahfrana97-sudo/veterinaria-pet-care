@@ -321,3 +321,19 @@ footer {
     display: block;
 }
 
+@media (max-width: 600px) {
+    .header .container {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    .header .btn {
+        padding: 12px 16px;
+        font-size: 14px;
+    }
+}
+
