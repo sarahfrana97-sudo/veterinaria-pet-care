@@ -341,12 +341,12 @@ footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 12px;
+    gap: 8px;
     width: 100%;
   }
 
   .header nav a {
-    font-size: 14px;
+    font-size: 13px;
   }
 }
 
