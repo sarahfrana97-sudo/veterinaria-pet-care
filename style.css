@@ -337,13 +337,14 @@ footer {
     }
 }
 @media (max-width: 600px) {
-  .header nav {
+ .header nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 8px;
+    gap: 6px 12px;
     width: 100%;
-  }
+    margin-top: 4px;
+}
 
   .header nav a {
     font-size: 13px;
