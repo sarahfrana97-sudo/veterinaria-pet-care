@@ -191,15 +191,19 @@ h2 {
     gap: 20px;
 }
 
+
 .service-card {
     background: white;
     padding: 30px;
     border-radius: 18px;
-    transition: 0.3s;
+    border: 1px solid #e8eeee;
+    box-shadow: 0 4px 16px rgba(31, 48, 51, 0.04);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .service-card:hover {
-    transform: translateY(-5px);
+   transform: translateY(-5px);
+box-shadow: 0 12px 28px rgba(31, 48, 51, 0.10);
 }
 
 .icon {
