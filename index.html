@@ -1,396 +1,317 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Veterinária Pet Care | Cuidado que seu pet merece</title>
-
-    <meta name="description"
-          content="Veterinária Pet Care: atendimento veterinário, vacinação, exames e cuidados para cães e gatos.">
-
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Veterinária Pet Care | Clínica veterinária em Brasília</title>
+<meta name="description" content="Consultas, vacinação, exames, cirurgias e internação para cães e gatos em Brasília-DF. Agende pelo WhatsApp.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Veterinária Pet Care | Cuidado que seu pet merece">
+<meta property="og:description" content="Atendimento veterinário com carinho, segurança e tecnologia. Agende pelo WhatsApp.">
+<meta property="og:image" content="/pets.jpg">
+<meta name="theme-color" content="#0f766e">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"VeterinaryCare","name":"Veterinária Pet Care","image":"/pets.jpg","telephone":"+5500000000000","address":{"@type":"PostalAddress","addressLocality":"Brasília","addressRegion":"DF","addressCountry":"BR"},"openingHours":"Mo-Fr 08:00-18:00"}
+</script>
+<style>
+:root{--p:#0f766e;--p2:#0b5e58;--a:#f97316;--ink:#12302e;--mut:#5b7270;--bg:#f4faf9;--w:#fff;--r:18px;--sh:0 10px 30px rgba(15,118,110,.12)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{font-family:'Poppins',system-ui,sans-serif;color:var(--ink);background:var(--w);line-height:1.6}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.c{width:min(1140px,92%);margin:0 auto}
+section{padding:80px 0}
+.tag{display:inline-block;color:var(--p);background:#d9f2ee;font-weight:600;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;padding:6px 14px;border-radius:99px;margin-bottom:14px}
+h1,h2,h3{line-height:1.2}
+h2{font-size:clamp(1.7rem,3.5vw,2.4rem);font-weight:700;margin-bottom:12px}
+.lead{color:var(--mut);max-width:620px}
+.center{text-align:center}.center .lead{margin:0 auto}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 26px;border-radius:99px;font-weight:600;border:2px solid transparent;cursor:pointer;font:inherit;font-weight:600;transition:.25s}
+.btn-a{background:var(--a);color:#fff;box-shadow:0 8px 20px rgba(249,115,22,.35)}.btn-a:hover{transform:translateY(-2px);filter:brightness(1.05)}
+.btn-o{border-color:#fff;color:#fff}.btn-o:hover{background:#fff;color:var(--p)}
+.btn-p{background:var(--p);color:#fff}.btn-p:hover{background:var(--p2)}
+/* topbar */
+.top{background:var(--p2);color:#d9f2ee;font-size:.85rem}
+.top .c{display:flex;justify-content:space-between;gap:10px;padding:8px 0;flex-wrap:wrap}
+.top a:hover{color:#fff}
+/* header */
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.95);backdrop-filter:blur(8px);box-shadow:0 2px 14px rgba(0,0,0,.06)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{font-weight:800;font-size:1.4rem;color:var(--p)}
+.logo span{color:var(--a)}
+nav ul{display:flex;gap:28px;list-style:none;font-weight:500}
+nav a:hover{color:var(--p)}
+.burger{display:none;background:none;border:0;font-size:1.8rem;cursor:pointer;color:var(--p)}
+/* hero */
+.hero{background:linear-gradient(135deg,rgba(11,94,88,.95),rgba(15,118,110,.82)),url(/pets.jpg) center/cover;color:#fff;padding:110px 0 90px}
+.hero .c{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
+.badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.35);padding:7px 16px;border-radius:99px;font-size:.85rem;font-weight:600;margin-bottom:20px}
+.dot{width:9px;height:9px;border-radius:50%;background:#4ade80;box-shadow:0 0 0 0 #4ade80;animation:p 1.8s infinite}
+@keyframes p{70%{box-shadow:0 0 0 10px transparent}100%{box-shadow:0 0 0 0 transparent}}
+.hero h1{font-size:clamp(2.1rem,5vw,3.4rem);font-weight:800;margin-bottom:18px}
+.hero p{font-size:1.1rem;opacity:.92;margin-bottom:30px;max-width:520px}
+.hero .btns{display:flex;gap:14px;flex-wrap:wrap}
+.hero img{border-radius:28px;box-shadow:0 25px 50px rgba(0,0,0,.35);aspect-ratio:4/3;object-fit:cover;width:100%}
+/* destaques */
+.hl{margin-top:-50px;position:relative;z-index:5;padding:0}
+.hl .c{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:var(--w);border-radius:var(--r);padding:28px;box-shadow:var(--sh);transition:.25s}
+.card:hover{transform:translateY(-6px)}
+.ico{font-size:2rem;width:60px;height:60px;display:grid;place-items:center;background:#d9f2ee;border-radius:16px;margin-bottom:14px}
+.card h3{font-size:1.15rem;margin-bottom:6px}
+.card p{color:var(--mut);font-size:.95rem}
+/* sobre */
+.about .c{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.about img{border-radius:var(--r);box-shadow:var(--sh);aspect-ratio:1;object-fit:cover;width:100%}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px}
+.stats div{background:var(--bg);border-radius:14px;padding:16px;text-align:center}
+.stats b{display:block;font-size:1.7rem;color:var(--p)}
+.stats small{color:var(--mut)}
+/* serviços */
+.serv{background:var(--bg)}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:44px}
+.card a.l{display:inline-block;margin-top:12px;color:var(--a);font-weight:600;font-size:.92rem}
+/* equipe */
+.team .card{text-align:center}
+.av{width:96px;height:96px;border-radius:50%;margin:0 auto 14px;background:linear-gradient(135deg,var(--p),#14b8a6);color:#fff;display:grid;place-items:center;font-size:2rem;font-weight:700;overflow:hidden}
+.av img{width:100%;height:100%;object-fit:cover}
+.role{color:var(--a);font-weight:600;font-size:.9rem;margin-bottom:8px}
+/* galeria */
+.gal{background:var(--bg)}
+.gg{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:40px}
+.gg div{aspect-ratio:1;border-radius:14px;background:linear-gradient(135deg,#bfe9e3,#8ad6cc);display:grid;place-items:center;font-size:2.2rem;overflow:hidden}
+.gg img{width:100%;height:100%;object-fit:cover}
+/* depoimentos */
+.stars{color:#f5b301;letter-spacing:2px;margin-bottom:10px}
+.card q{display:block;quotes:none;margin-bottom:14px;font-style:italic}
+/* faq */
+.faq{background:var(--bg)}
+.faq .c{max-width:800px}
+details{background:#fff;border-radius:14px;padding:18px 22px;margin-top:12px;box-shadow:0 4px 14px rgba(15,118,110,.07)}
+summary{cursor:pointer;font-weight:600;list-style:none;display:flex;justify-content:space-between}
+summary::after{content:"+";color:var(--a);font-size:1.4rem;line-height:1}
+details[open] summary::after{content:"–"}
+details p{margin-top:10px;color:var(--mut)}
+/* cta */
+.cta{background:linear-gradient(135deg,var(--p2),var(--p));color:#fff;text-align:center}
+.cta p{opacity:.9;margin:0 auto 26px}
+/* contato */
+.ct{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:40px}
+.info li{list-style:none;display:flex;gap:14px;margin-bottom:18px}
+.info .ico{width:48px;height:48px;font-size:1.3rem;margin:0;flex:none}
+form{background:var(--bg);padding:30px;border-radius:var(--r);display:grid;gap:14px}
+input,select,textarea{width:100%;padding:13px 16px;border:1.5px solid #cfe5e2;border-radius:12px;font:inherit;background:#fff}
+input:focus,select:focus,textarea:focus{outline:0;border-color:var(--p)}
+iframe{width:100%;height:320px;border:0;border-radius:var(--r);margin-top:30px}
+/* footer */
+footer{background:#0a3b37;color:#b8d6d2;padding:50px 0 24px;font-size:.92rem}
+.fg{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px;margin-bottom:30px}
+footer h4{color:#fff;margin-bottom:12px}
+footer a{display:block;margin-bottom:6px}footer a:hover{color:#fff}
+.cp{border-top:1px solid rgba(255,255,255,.12);padding-top:18px;text-align:center;font-size:.85rem}
+/* whatsapp flutuante */
+.wf{position:fixed;right:20px;bottom:20px;z-index:60;width:62px;height:62px;border-radius:50%;background:#25d366;display:grid;place-items:center;font-size:1.9rem;box-shadow:0 8px 24px rgba(0,0,0,.3);animation:pu 2.2s infinite}
+@keyframes pu{50%{transform:scale(1.08)}}
+/* reveal */
+.rv{opacity:0;transform:translateY(24px);transition:.7s}.rv.on{opacity:1;transform:none}
+/* mobile */
+@media(max-width:860px){
+ section{padding:60px 0}
+ .hero .c,.about .c,.ct{grid-template-columns:1fr}
+ .hero img{display:none}
+ .hl .c,.grid3,.fg{grid-template-columns:1fr}
+ .gg{grid-template-columns:repeat(2,1fr)}
+ .burger{display:block}
+ nav ul{display:none;position:absolute;top:72px;left:0;right:0;background:#fff;flex-direction:column;padding:20px 5%;gap:16px;box-shadow:0 12px 20px rgba(0,0,0,.08)}
+ nav ul.open{display:flex}
+ .top .c div:last-child{display:none}
+ .nav .btn{display:none}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
 </head>
-
 <body>
 
-<header class="header">
-    <div class="container nav">
+<div class="top"><div class="c">
+ <div>📞 <a data-wa href="#" data-cfg="phone">(00) 00000-0000</a> &nbsp;·&nbsp; 🕐 <span data-cfg="hours">Seg a Sex: 8h às 18h</span></div>
+ <div>📍 <span data-cfg="city">Brasília - DF</span> &nbsp;·&nbsp; <a data-ig target="_blank" rel="noopener" href="#">Instagram</a></div>
+</div></div>
 
-        <a href="#" class="logo">
-            🐾 Pet Care
-        </a>
-
-        <nav>
-            <a href="#inicio">Início</a>
-            <a href="#sobre">Sobre</a>
-            <a href="#servicos">Serviços</a>
-            <a href="#depoimentos">Depoimentos</a>
-            <a href="#contato">Contato</a>
-        </nav>
-
-        <a href="#contato" class="btn">
-            Agendar consulta
-        </a>
-    </div>
-</header>
-
+<header><div class="c nav">
+ <a href="#inicio" class="logo">🐾 <span data-cfg="short">Pet</span><span>Care</span></a>
+ <nav>
+  <button class="burger" id="bg" aria-label="Abrir menu">☰</button>
+  <ul id="menu">
+   <li><a href="#sobre">A Clínica</a></li>
+   <li><a href="#servicos">Serviços</a></li>
+   <li><a href="#equipe">Equipe</a></li>
+   <li><a href="#depoimentos">Depoimentos</a></li>
+   <li><a href="#faq">Dúvidas</a></li>
+   <li><a href="#contato">Contato</a></li>
+  </ul>
+ </nav>
+ <a class="btn btn-a" data-wa href="#">Agendar consulta</a>
+</div></header>
 
 <main>
-
-<section id="inicio" class="hero">
-
-    <div class="container hero-content">
-
-        <div class="hero-text">
-
-            <span class="tag">
-                🐶 Cuidado, carinho e saúde
-            </span>
-
-            <h1>
-                Seu pet merece
-                <span>o melhor cuidado.</span>
-            </h1>
-
-            <p>
-                Atendimento veterinário com carinho,
-                segurança e dedicação para cães e gatos
-                em todas as fases da vida.
-            </p>
-
-            <div class="hero-buttons">
-
-                <a href="#contato" class="btn">
-                    Agendar consulta
-                </a>
-
-                <a href="#servicos" class="btn secondary">
-                    Conhecer serviços
-                </a>
-
-            </div>
-
-        </div>
-
-        
-<div class="hero-image">
-    <div class="pet-card">
-        <img
-            src="pets.jpg"
-            alt="Cachorro e gato recebendo carinho"
-        >
-    </div>
-</div>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<section id="sobre" class="section">
-
-    <div class="container about">
-
-        <div>
-
-            <span class="tag">
-                Sobre a Pet Care
-            </span>
-
-            <h2>
-                Cuidamos do seu pet
-                como parte da família.
-            </h2>
-
-            <p>
-                Na Veterinária Pet Care, acreditamos que
-                cuidar da saúde dos animais também é uma
-                forma de demonstrar amor.
-            </p>
-
-            <p>
-                Nossa equipe trabalha para oferecer um
-                atendimento acolhedor, seguro e humanizado
-                para você e seu melhor amigo.
-            </p>
-
-        </div>
-
-        <div class="about-box">
-
-            <strong>+10</strong>
-            <span>Anos de experiência</span>
-
-            <strong>+2.000</strong>
-            <span>Pets atendidos</span>
-
-            <strong>100%</strong>
-            <span>Dedicação e carinho</span>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<section id="servicos" class="section services">
-
-    <div class="container">
-
-        <div class="section-title">
-
-            <span class="tag">
-                Nossos serviços
-            </span>
-
-            <h2>
-                Tudo para a saúde
-                do seu melhor amigo
-            </h2>
-
-        </div>
-
-
-        <div class="service-grid">
-
-            <article class="service-card">
-                <div class="icon">🩺</div>
-
-                <h3>Consultas</h3>
-
-                <p>
-                    Avaliação completa da saúde
-                    do seu pet.
-                </p>
-            <a class="whatsapp-btn"
-   href="https://wa.me/?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20consulta%20veterin%C3%A1ria%20para%20meu%20pet."
-   target="_blank"
-   rel="noopener noreferrer">
-   Agendar consulta
-</a>
-</article>
-
-            <article class="service-card">
-                <div class="icon">💉</div>
-
-               <h3>Vacinação</h3>
-
-<p>
-    Vacinas e acompanhamento
-    do calendário de imunização.
-</p>
-
-<a class="whatsapp-btn"
-   href="https://wa.me/?text=Ol%C3%A1%21%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20vacina%C3%A7%C3%A3o%20para%20meu%20pet."
-   target="_blank"
-   rel="noopener noreferrer">
-   Agendar vacinação
-</a>
-</article>
-
-            <article class="service-card">
-                <div class="icon">🔬</div>
-
-                <h3>Exames</h3>
-
-                <p>
-                    Exames para ajudar no diagnóstico
-                    e acompanhamento.
-                </p>
-                <a class="whatsapp-btn"
-   href="https://wa.me/?text=Olá!%20Gostaria%20de%20informações%20sobre%20exames%20veterinários%20para%20meu%20pet."
-   target="_blank"
-   rel="noopener noreferrer">
-    Agendar exames
-</a>
-            </article>
-
-
-            <article class="service-card">
-                <div class="icon">❤️</div>
-
-                <h3>Check-up</h3>
-
-                <p>
-                    Prevenção e acompanhamento
-                    da saúde do seu pet.
-                </p>
-                
-<a class="whatsapp-btn"
-   href="https://wa.me/?text=Olá!%20Gostaria%20de%20informações%20sobre%20o%20check-up%20veterinário%20para%20meu%20pet."
-   target="_blank"
-   rel="noopener noreferrer">
-  Agendar check-up
-</a>
-    </article>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<section class="cta">
-
-    <div class="container">
-
-        <h2>
-            Seu pet está precisando de cuidados?
-        </h2>
-
-        <p>
-            Entre em contato e agende uma consulta.
-        </p>
-
-        <a href="#contato" class="btn">
-            Quero agendar
-        </a>
-
-    </div>
-
-</section>
-
-
-<section id="depoimentos" class="section">
-
-    <div class="container">
-
-        <div class="section-title">
-
-            <span class="tag">
-                O que nossos clientes dizem
-            </span>
-
-            <h2>
-                Histórias de quem confia na Pet Care
-            </h2>
-
-        </div>
-
-
-        <div class="testimonial-grid">
-
-            <article class="testimonial">
-                <div>⭐⭐⭐⭐⭐</div>
-
-                <p>
-                    "Atendimento maravilhoso!
-                    Minha cachorrinha foi tratada
-                    com muito carinho."
-                </p>
-
-                <strong>
-                    Mariana S.
-                </strong>
-            </article>
-
-
-            <article class="testimonial">
-                <div>⭐⭐⭐⭐⭐</div>
-
-                <p>
-                    "Equipe muito atenciosa e
-                    profissional. Recomendo!"
-                </p>
-
-                <strong>
-                    Carlos R.
-                </strong>
-            </article>
-
-
-            <article class="testimonial">
-                <div>⭐⭐⭐⭐⭐</div>
-
-                <p>
-                    "Foi muito tranquilo levar
-                    meu gato para a consulta."
-                </p>
-
-                <strong>
-                    Fernanda M.
-                </strong>
-            </article>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<section id="contato" class="section contact">
-
-    <div class="container contact-content">
-
-        <div>
-
-            <span class="tag">
-                Entre em contato
-            </span>
-
-            <h2>
-                Vamos cuidar
-                do seu pet?
-            </h2>
-
-            <p>
-                Agende sua consulta através
-                do WhatsApp.
-            </p>
-
-            <a
-                href="https://wa.me/5500000000000"
-                target="_blank"
-                class="btn">
-
-                💬 Falar pelo WhatsApp
-
-            </a>
-
-        </div>
-
-
-        <div class="contact-info">
-
-            <p>📍 Brasília - DF</p>
-
-            <p>📞 (00) 00000-0000</p>
-
-            <p>📧 contato@petcare.com.br</p>
-
-            <p>🕐 Seg - Sex: 8h às 18h</p>
-
-        </div>
-
-    </div>
-
-</section>
-
+<section class="hero" id="inicio"><div class="c">
+ <div>
+  <span class="badge"><i class="dot"></i> Atendimento veterinário em Brasília</span>
+  <h1>Cuidado de verdade para quem faz parte da sua família.</h1>
+  <p>Consultas, vacinas, exames e cirurgias com equipe especializada, estrutura moderna e muito carinho para cães e gatos.</p>
+  <div class="btns">
+   <a class="btn btn-a" data-wa href="#">💬 Agendar pelo WhatsApp</a>
+   <a class="btn btn-o" href="#servicos">Ver serviços</a>
+  </div>
+ </div>
+ <img src="/pets.jpg" alt="Cachorro e gato recebendo carinho" width="600" height="450">
+</div></section>
+
+<section class="hl"><div class="c">
+ <div class="card rv"><div class="ico">⏰</div><h3>Horários flexíveis</h3><p>Atendimento com hora marcada e encaixes para urgências.</p></div>
+ <div class="card rv"><div class="ico">🎓</div><h3>Equipe especializada</h3><p>Veterinários com formação, residência e pós-graduação.</p></div>
+ <div class="card rv"><div class="ico">🏥</div><h3>Estrutura completa</h3><p>Ambiente confortável, seguro e equipado para o seu pet.</p></div>
+</div></section>
+
+<section class="about" id="sobre"><div class="c">
+ <img src="/pets.jpg" alt="Pets felizes na clínica" loading="lazy">
+ <div class="rv">
+  <span class="tag">A Clínica</span>
+  <h2>Cuidamos do seu pet como parte da família</h2>
+  <p class="lead">Nossa missão é oferecer o melhor tratamento de saúde para o seu animal de estimação, com ética, dedicação e amor pela profissão. Cada atendimento é pensado para deixar o pet tranquilo e você seguro.</p>
+  <div class="stats">
+   <div><b>+10</b><small>anos de experiência</small></div>
+   <div><b>+2.000</b><small>pets atendidos</small></div>
+   <div><b>100%</b><small>dedicação</small></div>
+  </div>
+ </div>
+</div></section>
+
+<section class="serv" id="servicos"><div class="c center">
+ <span class="tag">Nossos serviços</span>
+ <h2>Tudo para a saúde do seu melhor amigo</h2>
+ <p class="lead">Do check-up de rotina ao tratamento especializado, tudo em um só lugar.</p>
+ <div class="grid3">
+  <div class="card rv"><div class="ico">🩺</div><h3>Consultas</h3><p>Avaliação completa feita por médicos veterinários de clínica médica e cirúrgica.</p><a class="l" data-wa="Olá! Gostaria de agendar uma consulta." href="#">Agendar →</a></div>
+  <div class="card rv"><div class="ico">💉</div><h3>Vacinação</h3><p>Protocolos de vacinas e controle do calendário de imunização.</p><a class="l" data-wa="Olá! Gostaria de informações sobre vacinação." href="#">Agendar →</a></div>
+  <div class="card rv"><div class="ico">🔬</div><h3>Exames</h3><p>Exames laboratoriais e de imagem para diagnóstico preciso.</p><a class="l" data-wa="Olá! Gostaria de informações sobre exames." href="#">Agendar →</a></div>
+  <div class="card rv"><div class="ico">✂️</div><h3>Cirurgias</h3><p>Procedimentos eletivos e curativos com segurança e anestesia monitorada.</p><a class="l" data-wa="Olá! Gostaria de informações sobre cirurgias." href="#">Saber mais →</a></div>
+  <div class="card rv"><div class="ico">🛏️</div><h3>Internação</h3><p>Ambiente acolhedor com acompanhamento médico próximo.</p><a class="l" data-wa="Olá! Gostaria de informações sobre internação." href="#">Saber mais →</a></div>
+  <div class="card rv"><div class="ico">❤️</div><h3>Check-up preventivo</h3><p>Prevenção e acompanhamento para uma vida longa e saudável.</p><a class="l" data-wa="Olá! Gostaria de agendar um check-up." href="#">Agendar →</a></div>
+ </div>
+</div></section>
+
+<section class="team" id="equipe"><div class="c center">
+ <span class="tag">Equipe</span>
+ <h2>Profissionais que você pode confiar</h2>
+ <p class="lead">Formação sólida e atualização constante para cuidar bem do seu pet.</p>
+ <div class="grid3">
+  <!-- Troque as iniciais por <img src="/dr1.jpg" alt="Dr. Nome"> -->
+  <div class="card rv"><div class="av">DA</div><h3>Dr. Nome Sobrenome</h3><div class="role">Responsável técnico · Clínica médica</div><p>Médico veterinário, com residência em clínica médica de pequenos animais. CRMV-DF 0000.</p></div>
+  <div class="card rv"><div class="av">DB</div><h3>Dra. Nome Sobrenome</h3><div class="role">Clínica cirúrgica</div><p>Médica veterinária com residência e pós-graduação em cirurgia de pequenos animais.</p></div>
+  <div class="card rv"><div class="av">DC</div><h3>Dra. Nome Sobrenome</h3><div class="role">Clínica médica</div><p>Médica veterinária, mestre em saúde animal, atua com cães e gatos.</p></div>
+ </div>
+</div></section>
+
+<section class="gal" id="estrutura"><div class="c center">
+ <span class="tag">Estrutura</span>
+ <h2>Conheça a clínica</h2>
+ <p class="lead">Um ambiente pensado para o conforto do seu pet.</p>
+ <!-- Troque cada emoji por <img src="/foto1.jpg" alt="Recepção" loading="lazy"> -->
+ <div class="gg">
+  <div>🏥</div><div>🐕</div><div>🐈</div><div>🩺</div>
+  <div>🛏️</div><div>🔬</div><div>🧼</div><div>💚</div>
+ </div>
+</div></section>
+
+<section id="depoimentos"><div class="c center">
+ <span class="tag">Depoimentos</span>
+ <h2>Histórias de quem confia na gente</h2>
+ <div class="grid3">
+  <div class="card rv"><div class="stars">★★★★★</div><q>Atendimento maravilhoso! Minha cachorrinha foi tratada com muito carinho.</q><b>Mariana S.</b></div>
+  <div class="card rv"><div class="stars">★★★★★</div><q>Equipe muito atenciosa e profissional. Recomendo!</q><b>Carlos R.</b></div>
+  <div class="card rv"><div class="stars">★★★★★</div><q>Foi muito tranquilo levar meu gato para a consulta.</q><b>Fernanda M.</b></div>
+ </div>
+</div></section>
+
+<section class="faq" id="faq"><div class="c">
+ <div class="center"><span class="tag">Dúvidas</span><h2>Perguntas frequentes</h2></div>
+ <details><summary>Preciso agendar a consulta?</summary><p>Recomendamos agendar pelo WhatsApp para reduzir a espera. Em urgências, entre em contato imediatamente.</p></details>
+ <details><summary>Quais animais vocês atendem?</summary><p>Atendemos cães e gatos de todas as idades.</p></details>
+ <details><summary>Quais formas de pagamento são aceitas?</summary><p>Aceitamos Pix, cartões de débito e crédito. Consulte parcelamento.</p></details>
+ <details><summary>Com que frequência devo vacinar meu pet?</summary><p>Depende da idade e do histórico. Na consulta, o veterinário monta o calendário ideal.</p></details>
+</div></section>
+
+<section class="cta"><div class="c">
+ <h2>Seu pet está precisando de cuidados?</h2>
+ <p class="lead">Fale com a gente agora e agende o melhor horário.</p>
+ <a class="btn btn-a" data-wa href="#">💬 Falar pelo WhatsApp</a>
+</div></section>
+
+<section id="contato"><div class="c">
+ <div class="center"><span class="tag">Contato</span><h2>Vamos cuidar do seu pet?</h2><p class="lead">Preencha o formulário e continuamos a conversa pelo WhatsApp.</p></div>
+ <div class="ct">
+  <ul class="info">
+   <li><div class="ico">📍</div><div><b>Endereço</b><br><span data-cfg="address">Brasília - DF</span></div></li>
+   <li><div class="ico">📞</div><div><b>Telefone / WhatsApp</b><br><span data-cfg="phone">(00) 00000-0000</span></div></li>
+   <li><div class="ico">📧</div><div><b>E-mail</b><br><span data-cfg="email">contato@petcare.com.br</span></div></li>
+   <li><div class="ico">🕐</div><div><b>Horário</b><br><span data-cfg="hours">Seg a Sex: 8h às 18h</span></div></li>
+  </ul>
+  <form id="f">
+   <input name="n" placeholder="Seu nome" required>
+   <input name="p" placeholder="Nome e espécie do pet (ex.: Thor, cão)" required>
+   <select name="s"><option>Consulta</option><option>Vacinação</option><option>Exames</option><option>Cirurgia</option><option>Check-up</option><option>Outro</option></select>
+   <textarea name="m" rows="3" placeholder="Como podemos ajudar?"></textarea>
+   <button class="btn btn-p" type="submit">Enviar pelo WhatsApp</button>
+  </form>
+ </div>
+ <iframe id="map" title="Mapa" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div></section>
 </main>
 
+<footer><div class="c">
+ <div class="fg">
+  <div><h4>🐾 Pet Care</h4><p>Cuidado, carinho e saúde para cães e gatos.</p></div>
+  <div><h4>Explore</h4><a href="#sobre">A Clínica</a><a href="#servicos">Serviços</a><a href="#equipe">Equipe</a><a href="#contato">Contato</a></div>
+  <div><h4>Contato</h4><span data-cfg="phone"></span><br><span data-cfg="email"></span><br><span data-cfg="hours"></span></div>
+ </div>
+ <div class="cp">© 2026 Veterinária Pet Care. Todos os direitos reservados.</div>
+</div></footer>
 
-<footer>
+<a class="wf" data-wa href="#" aria-label="WhatsApp">💬</a>
 
-    <div class="container">
-
-        <p>
-            © 2026 Veterinária Pet Care.
-            Todos os direitos reservados.
-        </p>
-
-    </div>
-
-</footer>
-
-
-<script src="script.js"></script>
-
+<script>
+/* ===== EDITE AQUI: dados do cliente ===== */
+const C={
+ short:"Pet",
+ phone:"(00) 00000-0000",
+ whatsapp:"5500000000000",   // só números: 55 + DDD + número
+ email:"contato@petcare.com.br",
+ address:"Brasília - DF",
+ city:"Brasília - DF",
+ hours:"Seg a Sex: 8h às 18h",
+ instagram:"petcare",
+ mapQuery:"Brasília DF"
+};
+/* ======================================== */
+const wa=t=>`https://wa.me/${C.whatsapp}?text=${encodeURIComponent(t)}`;
+document.querySelectorAll('[data-cfg]').forEach(e=>e.textContent=C[e.dataset.cfg]);
+document.querySelectorAll('[data-wa]').forEach(a=>a.href=wa(a.dataset.wa||'Olá! Gostaria de agendar uma consulta veterinária.'));
+document.querySelectorAll('[data-ig]').forEach(a=>a.href='https://instagram.com/'+C.instagram);
+document.getElementById('map').src='https://maps.google.com/maps?q='+encodeURIComponent(C.mapQuery)+'&output=embed';
+document.getElementById('f').addEventListener('submit',e=>{
+ e.preventDefault();const d=new FormData(e.target);
+ window.open(wa(`Olá! Meu nome é ${d.get('n')}. Pet: ${d.get('p')}. Serviço: ${d.get('s')}. ${d.get('m')||''}`),'_blank');
+});
+const m=document.getElementById('menu');
+document.getElementById('bg').onclick=()=>m.classList.toggle('open');
+m.querySelectorAll('a').forEach(a=>a.onclick=()=>m.classList.remove('open'));
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('on');io.unobserve(x.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+</script>
 </body>
 </html>
