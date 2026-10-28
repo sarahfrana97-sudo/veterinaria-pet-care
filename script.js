@@ -1,1 +1,0 @@
-console.log("Veterinária Pet Care carregada com sucesso!");
